@@ -209,7 +209,6 @@ chrome.devtools.panels.elements.createSidebarPane(pluginTitle,function(sidebar) 
   });
   
   
-  
 });
 
 
@@ -225,7 +224,7 @@ if(localStorageValue)
 	shouldPanelBeShown=JSON.parse(localStorageValue);
 if(shouldPanelBeShown){
 	var knockoutPanel = chrome.devtools.panels.create(
-		"KnockoutJS",
+		"KnockoutJS (McDev Special Edition)",
 		"logo.png",
 		"/pages/panel.html"
 	);

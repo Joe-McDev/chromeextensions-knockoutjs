@@ -132,8 +132,12 @@ $(function(){
 		chromeExtension.eval(attachLoggingExtender,true,chromeExtensionEvalCallback);
 	});
 	chromeExtension.watchRefresh(function(){
-		//$("#enableTracing").text("Enable Tracing").removeAttr("disabled");
-		chromeExtension.eval(attachLoggingExtender,true,chromeExtensionEvalCallback);
+		if ($('#immediateTracing').is(':checked')){
+			chromeExtension.eval(attachLoggingExtender,true,chromeExtensionEvalCallback);
+		}
+		else {
+			$("#enableTracing").text("Enable Tracing").removeAttr("disabled");
+		}
 	});
 
 });
